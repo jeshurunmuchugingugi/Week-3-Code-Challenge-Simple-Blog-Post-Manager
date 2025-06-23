@@ -1,0 +1,20 @@
+{
+  "posts": [
+    {
+      "title": "Mastering Flexbox and Grid",
+      "author": "Mary kiani",
+      "date": "2025-06-23",
+      "image": "https://bugatti-newsroom.imgix.net/a32c5a46-eb09-4a6f-ac28-35622dde9d4d/12%20BUGATTI_Roadster_launch-set",
+      "content": "\nAt a young age, Da Vinci began studying art in Florence, where he learned from some of the greatest artists of his time. Through his work in painting and sculpture, Da Vinci became a master of the realistic representation of the human figure and the use of chiaroscuro to create depth and drama in his works.\n\nBut Da Vinci was not limited to painting and sculpture. He was also a highly prolific inventor and scientist, with interests ranging from anatomy and mechanics to botany and geology. His insatiable curiosity led him to study a wide range of subjects, and many of his sketches and notes contain ideas that were far ahead of their time.\n\n",
+      "id": 1
+    },
+    {
+      "title": "Man Behind Monalisa",
+      "author": "Leornado Davinchi",
+      "date": "2025-06-23",
+      "image": "https://davincitech.es/wp-content/uploads/2023/05/1626811601320.jpg",
+      "content": "Leonardo da Vinci, one of the most famous and influential artists in history, was born in Vinci, Italy, in 1452. Although known primarily for his art, Da Vinci was also an inventor, scientist, and philosopher, and is considered by many to be a true Renaissance genius.",
+      "id": 2
+    }
+  ]
+}

@@ -64,7 +64,7 @@ async function loadPosts() {
     blogDiv.className = 'blog-content-div1';
     let shortContent = post.content;
     if (post.content.length > 150) {
-        shortContent = post.content.slice(0, 250) + '...';
+        shortContent = post.content.slice(0, 350) + '...';
 }
 
     blogDiv.innerHTML = `
@@ -95,7 +95,7 @@ function displaySinglePost(post) {
     blogContentContainer.innerHTML = ''; // Clear previous content
     let shortContent = post.content;
     if (post.content.length > 150) {
-        shortContent = post.content.slice(0, 250) + '...';
+        shortContent = post.content.slice(0, 350) + '...';
     }
   
     const blogDiv = document.createElement('div');

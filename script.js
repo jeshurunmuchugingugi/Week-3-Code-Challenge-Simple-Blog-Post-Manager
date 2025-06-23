@@ -62,6 +62,11 @@ async function loadPosts() {
     // Full post content
     const blogDiv = document.createElement('div');
     blogDiv.className = 'blog-content-div1';
+    let shortContent = post.content;
+    if (post.content.length > 150) {
+        shortContent = post.content.slice(0, 250) + '...';
+}
+
     blogDiv.innerHTML = `
         <div class="titles">
             <h1 id="blog-title">${post.title}</h1>
@@ -74,7 +79,7 @@ async function loadPosts() {
       </div>
       <div class="img">
        <img src="${post.image}" alt="Post Image">
-       <p id="message-blog">${post.content}</p>
+      <p id="message-blog">${shortContent}</p>
       </div>
        
       <hr />
@@ -83,18 +88,15 @@ async function loadPosts() {
     blogContentContainer.appendChild(blogDiv);
 
     const messageBlog = document.getElementById('message-blog');
-    function textReducer(){
-        if(messageBlog.textContent.length > 150){
-           const newParagraph = messageBlog.textContent.slice(0,150) +"";
-           messageBlog.textContent = newParagraph;
-        }
-    }
-    textReducer();
   });
 }
 
 function displaySinglePost(post) {
     blogContentContainer.innerHTML = ''; // Clear previous content
+    let shortContent = post.content;
+    if (post.content.length > 150) {
+        shortContent = post.content.slice(0, 250) + '...';
+    }
   
     const blogDiv = document.createElement('div');
     blogDiv.className = 'blog-content-div1';
@@ -109,11 +111,20 @@ function displaySinglePost(post) {
       </div>
       <div class="img">
         <img src="${post.image}" alt="Post Image">
-        <p id="message-blog">${post.content}</p>
+        <p id="message-blog">${shortContent}</p>
       </div>
     `;
   
     blogContentContainer.appendChild(blogDiv);
+
+    const messageBlog = document.getElementById('message-blog');
+    function textReducer(){
+        if(messageBlog.textContent.length >= 150){
+           const newParagraph = messageBlog.textContent.slice(0,150) +"";
+           messageBlog.textContent = newParagraph;
+        }
+    }
+    textReducer();
   }
   
 const blogTitle = document.getElementById("blog-title");
